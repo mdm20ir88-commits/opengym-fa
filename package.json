@@ -1,0 +1,32 @@
+{
+  "name": "opengym-fa",
+  "version": "1.2.4",
+  "private": true,
+  "author": {
+    "name": "Arta (Jenesyx)",
+    "url": "https://github.com/Jenesyx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jenesyx/opengym-fa.git"
+  },
+  "homepage": "https://github.com/Jenesyx/opengym-fa",
+  "bugs": "https://github.com/Jenesyx/opengym-fa/issues",
+  "type": "module",
+  "workspaces": [
+    "api",
+    "frontend"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:api": "node scripts/start-api.js",
+    "dev:frontend": "npm run dev --workspace=opengym-frontend",
+    "build": "npm run build --workspace=opengym-frontend",
+    "test": "npm run test --workspace=opengym-frontend",
+    "start": "node scripts/start-api.js"
+  },
+  "license": "AGPL-3.0-or-later"
+}
