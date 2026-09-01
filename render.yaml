@@ -2,5 +2,13 @@ services:
   - type: web
     name: opengym
     env: docker
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./deploy-render/Dockerfile
     dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: RP_NAME
+        value: openGym
+      - key: PORT
+        value: 3000
+      - key: DATA_DIR
+        value: /data
